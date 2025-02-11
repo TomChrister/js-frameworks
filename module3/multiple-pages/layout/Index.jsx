@@ -1,14 +1,19 @@
 import { Header } from './Header.jsx';
 import { Footer } from './Footer.jsx';
+import { Card } from '../components/Card.jsx';
+import { Outlet } from 'react-router-dom';
 
-function Layout({ children }) {
+function Layout() {
     return (
         <>
-            <Header />
-            {children}
-            <Footer />
+            <div>
+                <Header />
+                <Outlet />
+                <Footer />
+            </div>
+
         </>
     )
 }
 
-export { Header, Footer, Layout };
+export { Header, Footer, Card,  Layout };

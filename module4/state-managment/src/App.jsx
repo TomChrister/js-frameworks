@@ -17,10 +17,11 @@ function App() {
                         e.preventDefault();
                         console.log(document.querySelector("#todo-input").value);
                         const inputText = document.querySelector("#todo-input").value;
+
                         setTodos([
                             ...todos,
                             {
-                                id: todos[todos.length - 1].id + 1,
+                                id: todos.length ? todos [todos.length - 1] + 1 : 1,
                                 text: inputText
                             },
                         ]);
@@ -44,5 +45,6 @@ function App() {
         </>
     );
 }
+
 
 export default App;
